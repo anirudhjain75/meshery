@@ -1,5 +1,4 @@
 import { NoSsr } from "@material-ui/core";
-import MesheryPerformanceComponent from "../components/MesheryPerformanceComponent";
 import { updatepagepath } from "../lib/store";
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
