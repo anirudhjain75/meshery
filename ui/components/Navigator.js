@@ -17,7 +17,7 @@ import Avatar from '@material-ui/core/Avatar';
 import { withRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faTerminal, faTachometerAlt, faExternalLinkAlt, faChevronCircleLeft, faPollH,
+  faTerminal, faTachometerAlt, faExternalLinkAlt, faChevronCircleLeft, faPollH, faEye
 } from '@fortawesome/free-solid-svg-icons';
 import { updatepagetitle } from '../lib/store';
 
@@ -185,6 +185,14 @@ const categories = [
     href: '/',
     title: 'Dashboard',
     show: false,
+    link: true,
+  },
+  {
+    id: 'Visualize',
+    icon: <FontAwesomeIcon icon={faEye}/>,
+    href: '/visualize',
+    title: 'Visualize Network',
+    show: true,
     link: true,
   },
   {
