@@ -1,9 +1,16 @@
 import React from 'react';
-import { NoSsr } from '@material-ui/core';
+import { Button, Dialog, DialogTitle, Divider, Container, TextField, RadioGroup, FormControlLabel, Radio, Grid } from '@material-ui/core';
 import cytoscape from 'cytoscape';
 import cxtmenu from 'cytoscape-cxtmenu';
 
 class MesheryVisualizeComponent extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {open: false}
+    this.handleClose = this.handleClose.bind(this)
+    this.handlePerformanceOption = this.handlePerformanceOption.bind(this)
+  }
 
   componentDidMount() {
     cytoscape.use(cxtmenu);
@@ -34,10 +41,7 @@ class MesheryVisualizeComponent extends React.Component {
       commands: [ // an array of commands to list in the menu or a function that returns the array
         {
           content: 'Load Test',
-          select: function(ele){
-            console.log(ele)
-            console.log( ele.id() );
-          }
+          select: this.handlePerformanceOption
         },{
           content: 'Stats',
           select: function(ele){
@@ -88,10 +92,101 @@ class MesheryVisualizeComponent extends React.Component {
     cy.cxtmenu(defaults)
   }
 
+  handleClose = () => {
+    console.log("Modal Closed")
+    this.setState((state) => {
+      return {
+        ...state,
+        open: false
+      }
+    })
+  }
+
+  handlePerformanceOption = (ele) => {
+    console.log("performance menu")
+    console.log(ele)
+    this.setState((state) => {
+      return {
+        ...state,
+        open: true
+      }
+    });
+  }
+
   render () {
     return (
-      <div id='cy' style={{width: '500px', height: '500px'}}>
-      </div>
+      <>
+        <Dialog
+          open={this.state.open}
+          onClose={this.handleClose}
+          aria-labelledby="Performance Test"
+        >
+          <DialogTitle id="dialog-title">Performance Test</DialogTitle>
+          <Container maxWidth={"xl"}>
+            <Grid
+              container
+              direction="column"
+              spacing={2}
+            >
+              <Grid item>
+                <Grid
+                  container
+                  direction="row"
+                  spacing={1}
+                >
+                  <Grid item xs={6}>
+                    <TextField label="Test Name" variant="outlined" fullWidth />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <TextField label="Service Mesh" variant="outlined" fullWidth />
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid item xs={12}>
+                <TextField label="URL to Test" variant="outlined" required fullWidth />
+              </Grid>
+              <Grid item>
+                <Grid
+                  container
+                  direction="row"
+                  spacing={1}
+                >
+                  <Grid item xs>
+                    <TextField label="Concurrent Request" variant="outlined" required fullWidth />
+                  </Grid>
+                  <Grid item xs>
+                    <TextField label="Queries Per Second" variant="outlined" required fullWidth />
+                  </Grid>
+                  <Grid item xs>
+                    <TextField label="Duration" variant="outlined" required fullWidth />
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid item>
+                <RadioGroup row aria-label="loadGenerator" name="loadGenerator" defaultValue="wrk2">
+                  <FormControlLabel
+                    value="wrk2"
+                    control={<Radio color="primary" />}
+                    label="wrk2"
+                  />
+                  <FormControlLabel
+                    value="fortio"
+                    control={<Radio color="primary" />}
+                    label="fortio"
+                  />
+                </RadioGroup>
+              </Grid>
+              <Grid item>
+                <Grid container direction="row-reverse" justify="flex-start" alignItems="center">
+                  <Button variant="contained" color="primary">Run Test</Button>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Container>
+        </Dialog>
+        <div id='cy' style={{width: '500px', height: '500px'}}>
+        </div>
+      </>
     )
   }
 }
