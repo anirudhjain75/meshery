@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Dialog, DialogTitle, Divider, Container, TextField, RadioGroup, FormControlLabel, Radio, Grid } from '@material-ui/core';
+import { Button, Dialog, DialogTitle, Container, TextField, RadioGroup, FormControlLabel, Radio, Grid } from '@material-ui/core';
 import cytoscape from 'cytoscape';
 import cxtmenu from 'cytoscape-cxtmenu';
 
