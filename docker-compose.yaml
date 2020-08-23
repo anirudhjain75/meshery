@@ -49,7 +49,7 @@ services:
     ports:
       - "10008:10008"
   meshery-osm:
-    image: layer5/meshery-osm:stable-latest
+    image: layer5/meshery-osm:latest
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
     ports:
