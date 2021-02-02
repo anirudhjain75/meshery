@@ -45,7 +45,7 @@
                         return
                     }
                     var query = $(this).val();
-                    var searchPage = "/version/1.0/search/?q=" + query;
+                    var searchPage = "/1.0/search/?q=" + query;
                     document.location = searchPage;
                     return false;
                 });

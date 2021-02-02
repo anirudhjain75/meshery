@@ -4,10 +4,10 @@
     <title>Documentation</title>
     <description>Documentation for Meshery, the multi-service mesh management plane for Istio, Linkerd, Consul, Network Service Mesh, Octarine, Envoy, Kuma, Traefik Mesh, App Mesh, Citrix Service Mesh and other service meshes.
 </description>
-    <link>https://docs.meshery.io/version/1.0/</link>
-    <atom:link href="https://docs.meshery.io/version/1.0/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 Feb 2021 22:18:13 +0530</pubDate>
-    <lastBuildDate>Tue, 02 Feb 2021 22:18:13 +0530</lastBuildDate>
+    <link>https://docs.meshery.io/1.0/</link>
+    <atom:link href="https://docs.meshery.io/1.0/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 02 Feb 2021 22:22:06 +0530</pubDate>
+    <lastBuildDate>Tue, 02 Feb 2021 22:22:06 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
   </channel>
