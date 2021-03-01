@@ -25,8 +25,8 @@ require (
 	github.com/jinzhu/copier v0.0.0-20190924061706-b57f9002281a
 	github.com/layer5io/gowrk2 v0.0.0-20191111234958-a4c9071c0f87
 	github.com/layer5io/meshery-operator v0.2.7
-	github.com/layer5io/meshkit v0.2.0
-	github.com/layer5io/meshsync v0.1.6
+	github.com/layer5io/meshkit v0.2.2
+	github.com/layer5io/meshsync v0.1.8
 	github.com/layer5io/nighthawk-go v0.1.5
 	github.com/layer5io/service-mesh-performance v0.3.3
 	github.com/pkg/errors v0.9.1
@@ -36,10 +36,11 @@ require (
 	github.com/qri-io/jsonschema v0.2.0
 	github.com/sirupsen/logrus v1.7.0
 	github.com/spf13/cobra v1.1.1
+	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.7.1
 	github.com/tcnksm/go-latest v0.0.0-20170313132115-e3007ae9052e
 	github.com/vmihailenco/taskq/v3 v3.0.0-beta.9.0.20200519124923-d9823546b85a
-	golang.org/x/net v0.0.0-20210119194325-5f4716e94777
+	golang.org/x/net v0.0.0-20210119194325-5f4716e94777 // indirect
 	golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
 	golang.org/x/sync v0.0.0-20201020160332-67f06af15bc9 // indirect
 	google.golang.org/grpc v1.35.0
