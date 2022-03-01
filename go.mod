@@ -14,7 +14,7 @@ replace (
 )
 
 require (
-	fortio.org/fortio v1.17.0
+	fortio.org/fortio v1.21.0
 	git.mills.io/prologic/bitcask v0.3.14
 	github.com/99designs/gqlgen v0.13.0
 	github.com/asaskevich/govalidator v0.0.0-20200907205600-7a23bdc65eef
@@ -22,7 +22,7 @@ require (
 	github.com/briandowns/spinner v1.16.0
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/docker/docker v1.13.1
-	github.com/envoyproxy/go-control-plane v0.9.9-0.20210512163311-63b5d3c536b0
+	github.com/envoyproxy/go-control-plane v0.9.10-0.20210907150352-cf90f659a021
 	github.com/ghodss/yaml v1.0.0
 	github.com/go-openapi/runtime v0.19.31
 	github.com/go-openapi/strfmt v0.20.2
@@ -64,9 +64,8 @@ require (
 	golang.org/x/crypto v0.0.0-20210513164829-c07d793c2f9a // indirect
 	golang.org/x/exp v0.0.0-20200331195152-e8c3332aa8e5 // indirect
 	golang.org/x/oauth2 v0.0.0-20210514164344-f6687ab2804c
-	golang.org/x/term v0.0.0-20210503060354-a79de5458b56 // indirect
 	gonum.org/v1/gonum v0.9.3
-	google.golang.org/grpc v1.40.0
+	google.golang.org/grpc v1.44.0
 	google.golang.org/protobuf v1.27.1
 	gopkg.in/yaml.v2 v2.4.0
 	gorm.io/gorm v1.21.14
